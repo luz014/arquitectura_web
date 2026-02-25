@@ -21,46 +21,127 @@
     </header>
 
     <section id="monolito">
-        <h2>Arquitectura Monolítica</h2>
+        <h2>1. Arquitectura Monolítica</h2>
         <p>
-            Es un modelo donde toda la aplicación está construida como una sola unidad.
-            Todos los módulos están conectados y dependen entre sí.
+            La arquitectura monolítica es un modelo donde toda la aplicación se desarrolla como una única unidad ejecutable.
+            Los módulos como interfaz, lógica de negocio y base de datos están fuertemente acoplados.
         </p>
-    </section>
 
-    <section id="negocio">
-        <h2>Arquitectura orientada a requerimientos de negocio</h2>
-        <p>
-            La arquitectura debe alinearse con los objetivos del negocio.
-            Se diseña pensando en escalabilidad, rendimiento y necesidades futuras.
-        </p>
-    </section>
-
-    <section id="documentacion">
-        <h2>Documentación de requerimientos</h2>
-        <p>
-            Incluye especificaciones funcionales, no funcionales y diagramas.
-        </p>
-    </section>
-
-    <section id="patrones">
-        <h2>Patrones arquitectónicos</h2>
+        <h3>Características</h3>
         <ul>
-            <li>Cliente-Servidor</li>
-            <li>Microservicios</li>
-            <li>Capas (Layered)</li>
-            <li>Event-Driven</li>
+            <li>Una sola base de código</li>
+            <li>Un único despliegue</li>
+            <li>Escalabilidad vertical</li>
+            <li>Dependencia entre módulos</li>
+        </ul>
+
+        <h3>Ejemplo Real</h3>
+        <p>
+            Sistemas empresariales desarrollados en Java con servidores como Apache Tomcat
+            o aplicaciones .NET desplegadas en IIS.
+        </p>
+
+        <h3>Ventajas</h3>
+        <ul>
+            <li>Desarrollo inicial sencillo</li>
+            <li>Menor complejidad arquitectónica</li>
+        </ul>
+
+        <h3>Desventajas</h3>
+        <ul>
+            <li>Dificultad para escalar por partes</li>
+            <li>Alto acoplamiento</li>
+            <li>Riesgo de caída total del sistema</li>
         </ul>
     </section>
 
-    <section id="servicios">
-        <h2>Modelo de Servicio IaaS y PaaS</h2>
-        <p><strong>IaaS:</strong> Infraestructura como servicio (Ej: servidores virtuales).</p>
-        <p><strong>PaaS:</strong> Plataforma como servicio (Ej: entorno para desplegar aplicaciones).</p>
+    <section id="negocio">
+        <h2>2. Arquitectura Orientada a Requerimientos de Negocio</h2>
+        <p>
+            La arquitectura debe alinearse con los objetivos estratégicos del negocio,
+            considerando escalabilidad, disponibilidad, presupuesto y crecimiento futuro.
+        </p>
+
+        <h3>Ejemplo: Plataforma de Streaming</h3>
+        <ul>
+            <li>Disponibilidad 24/7</li>
+            <li>Millones de usuarios simultáneos</li>
+            <li>Tolerancia a fallos</li>
+            <li>Distribución global</li>
+        </ul>
+
+        <h3>Ejemplo: Sistema Universitario</h3>
+        <ul>
+            <li>Usuarios limitados</li>
+            <li>Uso interno</li>
+            <li>Infraestructura simple</li>
+        </ul>
+    </section>
+
+    <section id="documentacion">
+        <h2>3. Documentación de Requerimientos</h2>
+        <p>
+            Antes de diseñar la arquitectura, se deben documentar los requerimientos
+            funcionales y no funcionales.
+        </p>
+
+        <h3>Requerimientos Funcionales</h3>
+        <ul>
+            <li>Registro de usuarios</li>
+            <li>Procesamiento de pagos</li>
+            <li>Generación de reportes</li>
+        </ul>
+
+        <h3>Requerimientos No Funcionales</h3>
+        <ul>
+            <li>Tiempo de respuesta menor a 2 segundos</li>
+            <li>Alta disponibilidad</li>
+            <li>Seguridad y protección de datos</li>
+        </ul>
+
+        <h3>Documentos Utilizados</h3>
+        <ul>
+            <li>Documento SRS</li>
+            <li>Diagramas UML</li>
+            <li>Casos de uso</li>
+        </ul>
+    </section>
+
+    <section id="patrones">
+        <h2>4. Patrones Arquitectónicos Más Utilizados</h2>
+
+        <h3>Cliente-Servidor</h3>
+        <p>Separación entre cliente (interfaz) y servidor (procesamiento).</p>
+
+        <h3>Arquitectura en Capas</h3>
+        <p>División en presentación, lógica de negocio y datos.</p>
+
+        <h3>Microservicios</h3>
+        <p>Servicios independientes que se comunican entre sí.</p>
+
+        <h3>Event-Driven</h3>
+        <p>Arquitectura basada en eventos que activan procesos.</p>
+    </section>
+
+    <section id="nube">
+        <h2>5. Modelo de Servicio IaaS y PaaS</h2>
+
+        <h3>IaaS (Infrastructure as a Service)</h3>
+        <p>
+        Proporciona infraestructura virtualizada como servidores,
+        almacenamiento y redes.
+        </p>
+
+        <h3>PaaS (Platform as a Service)</h3>
+        <p>
+        Ofrece un entorno completo para desarrollar y desplegar aplicaciones
+        sin gestionar infraestructura.
+        </p>
+
     </section>
 
     <footer>
-        <p>Proyecto académico - Arquitectura de Software</p>
+        <p>Proyecto de Arquitectura de Software</p>
     </footer>
 
     <script src="assets/js/script.js"></script>
