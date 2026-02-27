@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evolución de la Arquitectura de Sistemas</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -11,139 +12,160 @@
         <h1>Evolución de la Arquitectura de Sistemas</h1>
         <nav>
             <ul>
+                <li><a href="#introduccion">Introducción</a></li>
                 <li><a href="#monolito">Monolito</a></li>
                 <li><a href="#negocio">Requerimientos</a></li>
                 <li><a href="#documentacion">Documentación</a></li>
                 <li><a href="#patrones">Patrones</a></li>
-                <li><a href="#servicios">IaaS y PaaS</a></li>
+                <li><a href="#nube">IaaS y PaaS</a></li>
+                <li><a href="#estudiantes">Reseña</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="monolito">
-        <h2>1. Arquitectura Monolítica</h2>
-        <p>
-            La arquitectura monolítica es un modelo donde toda la aplicación se desarrolla como una única unidad ejecutable.
-            Los módulos como interfaz, lógica de negocio y base de datos están fuertemente acoplados.
-        </p>
+    <main>
 
-        <h3>Características</h3>
-        <ul>
-            <li>Una sola base de código</li>
-            <li>Un único despliegue</li>
-            <li>Escalabilidad vertical</li>
-            <li>Dependencia entre módulos</li>
-        </ul>
+        <section id="introduccion" class="fade-in">
+            <h2>Introducción</h2>
+            <p>
+                La arquitectura de sistemas ha evolucionado significativamente en las últimas décadas,
+                pasando de modelos monolíticos tradicionales a arquitecturas distribuidas y basadas en la nube.
+                Esta evolución responde a las necesidades de escalabilidad, rendimiento, disponibilidad
+                y alineación con los objetivos estratégicos del negocio.
+            </p>
+            <img src="assets/img/arquitectura-general.jpg" alt="Diagrama general de arquitectura de sistemas">
+        </section>
 
-        <h3>Ejemplo Real</h3>
-        <p>
-            Sistemas empresariales desarrollados en Java con servidores como Apache Tomcat
-            o aplicaciones .NET desplegadas en IIS.
-        </p>
+        <section id="monolito" class="fade-in">
+            <h2>1. Arquitectura Monolítica</h2>
+            <p>
+                La arquitectura monolítica es un modelo donde toda la aplicación se desarrolla como una única unidad ejecutable.
+                Los módulos como interfaz, lógica de negocio y base de datos están fuertemente acoplados.
+            </p>
 
-        <h3>Ventajas</h3>
-        <ul>
-            <li>Desarrollo inicial sencillo</li>
-            <li>Menor complejidad arquitectónica</li>
-        </ul>
+            <img src="assets/img/arquitectura-monolitica.jpg" alt="Diagrama de arquitectura monolítica">
 
-        <h3>Desventajas</h3>
-        <ul>
-            <li>Dificultad para escalar por partes</li>
-            <li>Alto acoplamiento</li>
-            <li>Riesgo de caída total del sistema</li>
-        </ul>
-    </section>
+            <h3>Características</h3>
+            <ul>
+                <li>Una sola base de código</li>
+                <li>Un único despliegue</li>
+                <li>Escalabilidad vertical</li>
+                <li>Dependencia entre módulos</li>
+            </ul>
 
-    <section id="negocio">
-        <h2>2. Arquitectura Orientada a Requerimientos de Negocio</h2>
-        <p>
-            La arquitectura debe alinearse con los objetivos estratégicos del negocio,
-            considerando escalabilidad, disponibilidad, presupuesto y crecimiento futuro.
-        </p>
+            <h3>Ejemplo Real</h3>
+            <p>
+                Sistemas empresariales desarrollados en Java con servidores como Apache Tomcat
+                o aplicaciones .NET desplegadas en IIS.
+            </p>
+        </section>
 
-        <h3>Ejemplo: Plataforma de Streaming</h3>
-        <ul>
-            <li>Disponibilidad 24/7</li>
-            <li>Millones de usuarios simultáneos</li>
-            <li>Tolerancia a fallos</li>
-            <li>Distribución global</li>
-        </ul>
+        <section id="negocio" class="fade-in">
+            <h2>2. Arquitectura Orientada a Requerimientos de Negocio</h2>
+            <p>
+                La arquitectura debe alinearse con los objetivos estratégicos del negocio,
+                considerando escalabilidad, disponibilidad, presupuesto y crecimiento futuro.
+            </p>
 
-        <h3>Ejemplo: Sistema Universitario</h3>
-        <ul>
-            <li>Usuarios limitados</li>
-            <li>Uso interno</li>
-            <li>Infraestructura simple</li>
-        </ul>
-    </section>
+            <img src="assets/img/SOA.webp" alt="Diagrama de arquitectura orientada a servicios">
 
-    <section id="documentacion">
-        <h2>3. Documentación de Requerimientos</h2>
-        <p>
-            Antes de diseñar la arquitectura, se deben documentar los requerimientos
-            funcionales y no funcionales.
-        </p>
+            <h3>Ejemplo: Plataforma de Streaming</h3>
+            <ul>
+                <li>Disponibilidad 24/7</li>
+                <li>Millones de usuarios simultáneos</li>
+                <li>Tolerancia a fallos</li>
+                <li>Distribución global</li>
+            </ul>
+        </section>
 
-        <h3>Requerimientos Funcionales</h3>
-        <ul>
-            <li>Registro de usuarios</li>
-            <li>Procesamiento de pagos</li>
-            <li>Generación de reportes</li>
-        </ul>
+        <section id="documentacion" class="fade-in">
+            <h2>3. Documentación de Requerimientos</h2>
+            <p>
+                Antes de diseñar la arquitectura, se deben documentar los requerimientos
+                funcionales y no funcionales.
+            </p>
 
-        <h3>Requerimientos No Funcionales</h3>
-        <ul>
-            <li>Tiempo de respuesta menor a 2 segundos</li>
-            <li>Alta disponibilidad</li>
-            <li>Seguridad y protección de datos</li>
-        </ul>
+            <img src="assets/img/DOcumentacion.png" alt="Ejemplo de documentación técnica">
 
-        <h3>Documentos Utilizados</h3>
-        <ul>
-            <li>Documento SRS</li>
-            <li>Diagramas UML</li>
-            <li>Casos de uso</li>
-        </ul>
-    </section>
+            <h3>Requerimientos Funcionales</h3>
+            <ul>
+                <li>Registro de usuarios</li>
+                <li>Procesamiento de pagos</li>
+                <li>Generación de reportes</li>
+            </ul>
+        </section>
 
-    <section id="patrones">
-        <h2>4. Patrones Arquitectónicos Más Utilizados</h2>
+        <section id="patrones" class="fade-in">
+            <h2>4. Patrones Arquitectónicos Más Utilizados</h2>
 
-        <h3>Cliente-Servidor</h3>
-        <p>Separación entre cliente (interfaz) y servidor (procesamiento).</p>
+            <h3>Cliente-Servidor</h3>
+            <p>Separación entre cliente (interfaz) y servidor (procesamiento).</p>
 
-        <h3>Arquitectura en Capas</h3>
-        <p>División en presentación, lógica de negocio y datos.</p>
+            <h3>Arquitectura en Capas</h3>
+            <p>División en presentación, lógica de negocio y datos.</p>
 
-        <h3>Microservicios</h3>
-        <p>Servicios independientes que se comunican entre sí.</p>
+            <h3>Microservicios</h3>
+            <p>Servicios independientes que se comunican entre sí.</p>
 
-        <h3>Event-Driven</h3>
-        <p>Arquitectura basada en eventos que activan procesos.</p>
-    </section>
+            <img src="assets/img/Patrones.png" alt="Ejemplo de patrones arquitectónicos">
+        </section>
 
-    <section id="nube">
-        <h2>5. Modelo de Servicio IaaS y PaaS</h2>
+        <section id="nube" class="fade-in">
+            <h2>5. Modelo de Servicio IaaS y PaaS</h2>
 
-        <h3>IaaS (Infrastructure as a Service)</h3>
-        <p>
-        Proporciona infraestructura virtualizada como servidores,
-        almacenamiento y redes.
-        </p>
+            <h3>IaaS</h3>
+            <p>
+                Proporciona infraestructura virtualizada como servidores,
+                almacenamiento y redes.
+            </p>
 
-        <h3>PaaS (Platform as a Service)</h3>
-        <p>
-        Ofrece un entorno completo para desarrollar y desplegar aplicaciones
-        sin gestionar infraestructura.
-        </p>
+            <h3>PaaS</h3>
+            <p>
+                Ofrece un entorno completo para desarrollar y desplegar aplicaciones
+                sin gestionar infraestructura.
+            </p>
 
-    </section>
+            <img src="assets/img/nube.jpg" alt="Servicios en la nube">
+        </section>
+
+        <section id="conclusion" class="fade-in">
+            <h2>Conclusión</h2>
+            <p>
+                La evolución de la arquitectura de sistemas demuestra cómo la tecnología se adapta
+                a las necesidades del negocio y a la creciente demanda de escalabilidad y disponibilidad.
+                Comprender estos modelos permite diseñar soluciones más eficientes, seguras y preparadas
+                para el futuro.
+            </p>
+        </section>
+
+        <section id="estudiantes" class="fade-in">
+            <h2>Reseña de los Estudiantes</h2>
+
+            <div class="estudiante fade-in">
+                <img src="assets/img/estudiante1.png" alt="Foto de Luis Stocel">
+                <h3>Luis Stocel</h3>
+                <p>
+                    Estudiante de desarrollo de software con interés en administración de software,
+                    desarrollo backend y frontend.
+                </p>
+            </div>
+
+            <div class="estudiante fade-in">
+                <img src="assets/img/estudiante2.jpg" alt="Foto de Liam Arosemena">
+                <h3>Liam Arosemena</h3>
+                <p>
+                    Estudiante enfocado en desarrollo web e interesado en música y videojuegos.
+                </p>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <p>Proyecto de Arquitectura de Software</p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
+
 </body>
 </html>
